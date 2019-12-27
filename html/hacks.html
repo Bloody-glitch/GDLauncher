@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>GD Launcher</title>
+    <link rel="stylesheet" type="text/css" href="../css/semantic.min.css">
+    <script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/semantic.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="../js/launching.js"></script>
+  </head>
+  <body>
+    <div align="center" class="logo"><img class="logo" src="../img/logo.png" alt=""></div>
+    <center>
+      <div class="box">
+        <div align="center" class="mm"><img class="h" src="../img/hacks.png" alt=""></div>
+        <hr>
+          <span>
+          <button class="ui inverted basic button" id="menuButton1" onclick="home()" type="button">Home</button>
+          <button class="ui inverted basic button" id="menuButton2" onclick="hacks()" type="button">Hacks</button>
+          <button class="ui inverted basic button" id="menuButton3" onclick="about()" type="button">About</button>
+          </span>
+          <hr>
+          <div class="hacks">
+            <br>
+            <div align="left" class="text">
+              <h3 class="hacksText">FPS Bypass</h3>
+                <button class="ui inverted basic button run" onclick="runBypass()" type="submit">Launch</button>
+                <p>Disables FPS limit</p>
+            </div>
+            <br>
+          <hr class="hacks1">
+          <br>
+          <div align="left" class="text">
+            <h3 class="hacksText">Multi Scaling</h3>
+            <button class="ui inverted basic button run" onclick="runMS()" type="submit">Launch</button>
+            <p>Removes a restriction on resizing an object</p>
+          </div>
+          <br>
+          <hr class="hacks1">
+          <br>
+          <div align="left" class="text">
+            <h3 class="hacksText">Practice Music</h3>
+            <button class="ui inverted basic button run" onclick="runPM()" type="submit">Launch</button>
+            <p>Replaces standard practice music with music from level</p>
+          </div>
+        <br>
+      </div>
+        <hr>
+        <button type="button" onclick="runGD();" id="runGame" class="ui inverted basic button">Play Geometry Dash</button>
+          </div>
+      </center>
+    </body>
+    </html>

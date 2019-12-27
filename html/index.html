@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>GD Launcher</title>
+    <link rel="stylesheet" type="text/css" href="../css/semantic.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="../js/launching.js"></script>
+    <script type="text/javascript" src="../js/semantic.min.js"></script>
+  </head>
+  <body>
+    <script>
+      require("./../renderer.js");
+    </script>
+    <div align="center" class="logo"><img class="logo" src="../img/logo.png" alt=""></div>
+    <center>
+      <div class="box">
+        <div align="center" class="mm"><img class="mm" src="../img/mm.png" alt=""></div>
+        <hr>
+          <span>
+          <button class="ui inverted basic button" id="menuButton1" onclick="home()" type="button">Home</button>
+          <button class="ui inverted basic button" id="menuButton2" onclick="hacks()" type="button">Hacks</button>
+          <button class="ui inverted basic button" id="menuButton3" onclick="about()" type="button">About</button>
+          </span>
+          <hr>
+          <div class="hacks">
+              <br>
+          <div align="left" class="text">
+            <h2>Discord server:</h2>
+            <p class="link">Link: <a href="https://discord.gg/geometrydash" target="_blank">https://discord.gg/geometrydash</a></p>
+          </div>
+          <br>
+          <hr class="hacks1">
+          <br>
+          <div align="left" class="text">
+            <h2>Demonlist:</h2>
+            <p class="link">Link: <a href="https://pointercrate.com/demonlist/" target="_blank">https://pointercrate.com/demonlist</a></p>
+          </div>
+          <br>
+          </div> 
+        <hr>
+        <button type="button" onclick="runGD();" id="runGame" class="ui inverted basic button">Play Geometry Dash</button>
+      </div>
+      </center>
+  </body>
+</html>
