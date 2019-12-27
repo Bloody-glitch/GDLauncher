@@ -31,7 +31,6 @@ const child_process = require('child_process');
     function RunHack(hack)
     {
         let directory = hack.Directory ? hackObject.Directory : "hacks/";
-        console.log(hack);
 
         child_process.exec(`start ${hack.File}`, { cwd: directory });
     }
