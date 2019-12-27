@@ -27,27 +27,11 @@ const child_process = require('child_process');
             menu3.disabled = false;
         });
     }
-        
-    //launch FPSBypass.exe
-    let runBypass = function(){
-        let workerProcess = child_process.exec('start FPSBypass.exe', {cwd: "hacks/"}) //use resources/app/hacks/ when compiling
-        workerProcess.on('close', function (code) {
-        console.log(code);
-        });
-    }
-        
-    //launch MultiScaling.ex
-    let runMS = function(){
-        let workerProcess = child_process.exec('start MultiScaling.exe', {cwd: "hacks/"}) //use resources/app/hacks/ when compiling
-        workerProcess.on('close', function (code) {
-        console.log(code);
-        });
-    }
-        
-    //launch PracticeMusic.exe
-    let runPM = function(){
-        let workerProcess = child_process.exec('start PracticeMusic.exe', {cwd: "hacks/"}) //use resources/app/hacks/ when compiling
-        workerProcess.on('close', function (code) {
-        console.log(code);
-        }); 
+
+    function RunHack(hack)
+    {
+        let directory = hack.Directory ? hackObject.Directory : "hacks/";
+        console.log(hack);
+
+        child_process.exec(`start ${hack.File}`, { cwd: directory });
     }
