@@ -1,3 +1,4 @@
+//transition between pages
 function hacks(){
   $( "body" ).load( "../html/hacks.html" )
 }
