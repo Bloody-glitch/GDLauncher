@@ -1,6 +1,7 @@
 const path = require('path');
 const url = require('url');
 const {app, BrowserWindow, Menu} = require('electron');
+//discord rich presence
 const client = require('discord-rich-presence')('658606532761485323');
        client.updatePresence({
         details: 'Playing Geometry Dash',
@@ -11,6 +12,7 @@ const client = require('discord-rich-presence')('658606532761485323');
 
 let win;
 
+// create a window
 function createWindow() {
     win = new BrowserWindow({
         webPreferences: {
@@ -26,13 +28,15 @@ function createWindow() {
     });
 
     Menu.setApplicationMenu(Menu.buildFromTemplate([{ label: 'Init' }]))
-
+    
+    //removes toolbar
     win.webContents.once('did-finish-load', () => {
         Menu.setApplicationMenu(null)
       })
       
     win.setMenu(null)
     
+    //load main menu
     win.loadURL(url.format({
         pathname: path.join(__dirname, '/html/index.html'),
         protocol: 'file',
