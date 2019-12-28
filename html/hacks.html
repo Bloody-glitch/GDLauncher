@@ -23,34 +23,34 @@
           <button class="ui inverted basic button" id="menuButton3" onclick="about()" type="button">About</button>
           </span>
           <hr>
-          <div class="hacks">
-            <br>
-            <div align="left" class="text">
-              <h3 class="hacksText">FPS Bypass</h3>
-                <button class="ui inverted basic button run" onclick="runBypass()" type="submit">Launch</button>
-                <p>Disables FPS limit</p>
-            </div>
-            <br>
-          <hr class="hacks1">
-          <br>
-          <div align="left" class="text">
-            <h3 class="hacksText">Multi Scaling</h3>
-            <button class="ui inverted basic button run" onclick="runMS()" type="submit">Launch</button>
-            <p>Removes a restriction on resizing an object</p>
+          <div class="hacks" id="hacksSection">
+            <!--Leave this section blank.-->
           </div>
-          <br>
-          <hr class="hacks1">
-          <br>
-          <div align="left" class="text">
-            <h3 class="hacksText">Practice Music</h3>
-            <button class="ui inverted basic button run" onclick="runPM()" type="submit">Launch</button>
-            <p>Replaces standard practice music with music from level</p>
-          </div>
-        <br>
-      </div>
         <hr>
         <button type="button" onclick="runGD();" id="runGame" class="ui inverted basic button">Play Geometry Dash</button>
           </div>
       </center>
+    <script>
+      let hacksJson = require('../config/Hacks');
+      let section = document.getElementById("hacksSection");
+
+      for (let i = 0; i < hacksJson.length; i++)
+      {
+        let isLast = i === (hacksJson.length - 1);
+
+        let hack = hacksJson[i];
+        let hackString = JSON.stringify(hack);
+        hackString = hackString.replace(/"/g,'\'');
+
+        section.innerHTML += `<br>
+            <div align="left" class="text">
+              <h3 class="hacksText">${hack.Title}</h3>
+              <button class="ui inverted basic button run" onclick="RunHack(${hackString})" type="submit">Launch</button>
+              <p>${hack.Description}</p>
+            </div>
+          <br>
+          ${!isLast ? "<hr class=\"hacks1\">" : ""}`
+      }
+    </script>
     </body>
     </html>
