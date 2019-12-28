@@ -3,18 +3,18 @@
     "Title": "FPS Bypass",
     "Description": "Disables FPS limit",
     "File": "FPSBypass.exe",
-    "Directory": null
+    "Path": null
   },
   {
     "Title": "Multi Scaling",
     "Description": "Removes a restriction on resizing an object",
     "File": "MultiScaling.exe",
-    "Directory": null
+    "Path": null
   },
   {
     "Title": "Practice Music",
     "Description": "Replaces standard practice music with music from level",
     "File": "PracticeMusic.exe",
-    "Directory": null
+    "Path": null
   }
 ]
